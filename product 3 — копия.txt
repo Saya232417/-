@@ -1,0 +1,9 @@
+Булегенова Сая ИС231(4)
+mono /tmp/Dfk4KliIgF.exe
+Product: Laptop, Price: 1200.50, Stock: 10
+Product: Laptop, Price: 1150.75, Stock: 10
+Product: Laptop, Price: 1150.75, Stock: 15
+Product: Laptop, Price: 1150.75, Stock: 12
+Product: Smartphone, Price: 0, Stock: 0
+
+=== Code Execution Successful ===

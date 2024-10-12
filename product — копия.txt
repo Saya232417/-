@@ -1,0 +1,59 @@
+Булегенова Сая ИС231(4)
+using System;
+
+public class Product
+{
+    // Поля класса для хранения данных о товаре
+    private string Name;    // Название товара
+    private decimal Price;   // Цена товара
+    private int Stock;       // Количество товара на складе
+
+    // Первый конструктор: принимает все параметры
+    public Product(string name, decimal price, int stock)
+    {
+        Name = name;        // Присваиваем название товара
+        Price = price;      // Присваиваем цену товара
+        Stock = stock;      // Присваиваем количество товара на складе
+    }
+
+    // Второй конструктор: принимает только название товара, остальные параметры по умолчанию
+    public Product(string name)
+    {
+        Name = name;        // Присваиваем название товара
+        Price = 0;          // Цена по умолчанию 0
+        Stock = 0;          // Количество на складе по умолчанию 0
+    }
+
+    // Метод для обновления цены товара
+    public void UpdatePrice(decimal newPrice)
+    {
+        Price = newPrice;   // Обновляем цену товара
+    }
+
+    // Метод для пополнения запаса товара на складе
+    public void Restock(int quantity)
+    {
+        Stock += quantity;  // Увеличиваем количество товара на складе
+    }
+
+    // Метод для получения информации о товаре
+    public string GetProductInfo()
+    {
+        return $"Product: {Name}, Price: {Price}, Stock: {Stock}";  // Возвращаем строку с информацией о товаре
+    }
+
+    // Метод для продажи товара, уменьшает количество на складе
+    public bool Sell(int quantity)
+    {
+        if (Stock >= quantity)    // Проверяем, достаточно ли товара на складе
+        {
+            Stock -= quantity;    // Уменьшаем количество товара на складе
+            return true;          // Возвращаем true, если продажа успешна
+        }
+        else
+        {
+            Console.WriteLine("Not enough stock to complete the sale.");  // Сообщаем о недостатке товара
+            return false;         // Возвращаем false, если продажа не может быть выполнена
+        }
+    }
+}

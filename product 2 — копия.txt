@@ -1,0 +1,26 @@
+Булегенова Сая ИС231(4)
+class Program
+{
+    static void Main(string[] args)
+    {
+        // Создаем продукт с помощью первого конструктора
+        Product product1 = new Product("Laptop", 1200.50m, 10);
+        Console.WriteLine(product1.GetProductInfo());   // Выводим информацию о продукте
+
+        // Обновляем цену продукта
+        product1.UpdatePrice(1150.75m);
+        Console.WriteLine(product1.GetProductInfo());   // Выводим обновленную информацию о продукте
+
+        // Пополняем склад
+        product1.Restock(5);
+        Console.WriteLine(product1.GetProductInfo());   // Выводим информацию о количестве товара на складе
+
+        // Пробуем продать товар
+        product1.Sell(3);
+        Console.WriteLine(product1.GetProductInfo());   // Выводим информацию о товаре после продажи
+
+        // Создаем продукт с помощью второго конструктора
+        Product product2 = new Product("Smartphone");
+        Console.WriteLine(product2.GetProductInfo());   // Выводим информацию о втором продукте
+    }
+}
